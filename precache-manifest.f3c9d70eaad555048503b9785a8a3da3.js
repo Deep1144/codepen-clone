@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "72863607d2b302a77207eb0d2c9c9e32",
+    "revision": "ba3403ddbb334fb76c041f5430290e06",
     "url": "/codepen-clone/index.html"
   },
   {
