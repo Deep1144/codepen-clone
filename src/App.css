@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+body{
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.top-panel {
+  height: 50vh;
+  display: flex;
+  width: 100%;
+  overflow-x: hidden;
+  background-color: hsl(225, 6%, 25%);
+  padding-top: 12px;
+  padding-bottom: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.CodeMirror {
+  height: 100% !important;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.code-mirror-wrapper {
+  flex-grow: 1;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  overflow: hidden;
+}
+.editor {
+  flex-grow: 1;
+  flex-basis: 0;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.collapsed {
+  flex-grow: 0;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.collapsed .CodeMirror-scroll {
+  position: absolute;
+  overflow: hidden !important;
+}
+
+.block-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: hsl(225, 6%, 13%);
   color: white;
+  padding: 0.5rem 0.5rem 0rem 1rem;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.expand-collapse-btn {
+  margin:0;
+  background: none;
+  border: none;
+  padding: -10;
+  color: white;
+  cursor: pointer;
+}
+svg{
+  padding: 0;
+  margin-top: 2px;
+  margin-left: 5px;
+}
+.output {
+  height: 50vh;
+  display: flex;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
